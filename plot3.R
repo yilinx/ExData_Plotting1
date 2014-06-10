@@ -11,8 +11,8 @@ datafile <- read.table(filelocation, header=T, sep=";", colClasses=c("character"
 datafile$Date <- strptime(datafile$Date,format="%d/%m/%Y")
 
 #Change time column to POSIXlt
-datafile2$Time <- paste(as.character(datafile2$Date),datafile2$Time)
-datafile2$Time <- strptime(datafile2$Time, format="%Y-%m-%d %H:%M:%S")
+datafile$Time <- paste(as.character(datafile$Date),datafile$Time)
+datafile$Time <- strptime(datafile$Time, format="%Y-%m-%d %H:%M:%S")
 
 
 startDate <- strptime("2007-02-01",format="%Y-%m-%d")    #Start date
